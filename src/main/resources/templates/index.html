@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Best of the Year</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div th:insert="fragments :: navbar"></div>
+
+<div class="container text-center my-5">
+    <h1>Best of the year by <span th:text="${name}"></span></h1>
+    <div class="my-4">
+        <img src="https://web.quotidianopiemontese.it/cronachedicostume/files/2014/03/quotidiano_piemontese_festa.jpg" class="img-fluid" width="20%"/>
+    </div>
+    <p>Lorem ipsum</p>
+    <a href="/movies" class="btn btn-primary">Best Movies</a>
+    <a href="/songs" class="btn btn-secondary">Best Songs</a>
+</div>
+
+<!-- Footer -->
+<div th:insert="fragments :: footer"></div>
+
+</body>
+</html>

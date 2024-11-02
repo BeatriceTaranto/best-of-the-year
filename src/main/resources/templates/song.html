@@ -1,0 +1,20 @@
+<!-- song.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Song Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div th:insert="fragments :: navbar"></div>
+
+<div class="container text-center my-5">
+    <h1>Song Title: <span th:text="${song.title}"></span></h1>
+    <a href="/songs" class="btn btn-link mt-3">Back to Songs</a>
+</div>
+
+<div th:insert="fragments :: footer"></div>
+
+</body>
+</html>

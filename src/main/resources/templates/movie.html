@@ -1,0 +1,23 @@
+<!-- movie.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div th:insert="fragments :: navbar"></div>
+
+<div class="container text-center my-5">
+    <h1>Movie Title: <span th:text="${movie.title}"></span></h1>
+    <a href="/movies" class="btn btn-link mt-3">Back to Movies</a>
+</div>
+
+<div th:insert="fragments :: footer"></div>
+
+</body>
+</html>
+
+
+

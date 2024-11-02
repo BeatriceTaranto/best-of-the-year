@@ -1,0 +1,25 @@
+<!-- movies.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Best Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div th:insert="fragments :: navbar"></div>
+
+<div class="container text-center my-5">
+    <h1>Best Movies of the Year</h1>
+    <ul class="list-group">
+        <li class="list-group-item" th:each="movie : ${movies}">
+            <a th:href="@{/movies/{id}(id=${movie.id})}" th:text="${movie.title}"></a>
+        </li>
+    </ul>
+    <a href="/" class="btn btn-link mt-3">Back to Home</a>
+</div>
+
+<div th:insert="fragments :: footer"></div>
+
+</body>
+</html>
