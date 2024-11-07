@@ -1,6 +1,7 @@
 package it.lessons.best_of_the_year.controller;
 
 import java.util.Arrays;
+
 import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -60,6 +61,12 @@ public class BestOfTheYearController {
 	            break;
 	        }
 	    }
+	    
+	    if (selectedMovie == null) {
+            model.addAttribute("errorMessage", "Movie not found");
+            return "error"; 
+        }
+	    
 	    model.addAttribute("movie", selectedMovie);
 	    return "movie";
 	}
@@ -75,6 +82,12 @@ public class BestOfTheYearController {
 	            break;
 	        }
 	    }
+	    
+	    if (selectedSong == null) {
+            model.addAttribute("errorMessage", "Song not found");
+            return "error"; 
+        }
+	    
 	    model.addAttribute("song", selectedSong);
 	    return "song";
 	}
